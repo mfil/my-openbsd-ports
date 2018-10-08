@@ -1,0 +1,9 @@
+@comment $OpenBSD: PLIST,v$
+@bin bin/1oom_classic_sdl2
+@bin bin/1oom_cmdline
+@bin bin/1oom_gfxconv
+@bin bin/1oom_lbxedit
+@bin bin/1oom_lbxview_sdl2
+@bin bin/1oom_pbxdump
+@bin bin/1oom_pbxmake
+@bin bin/1oom_saveconv
