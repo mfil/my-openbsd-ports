@@ -13,6 +13,10 @@ MASTER_SITES=	https://gitlab.com/KilgoreTroutMaskReplicant/1oom/-/archive/v${VER
 
 WANTLIB=	SDL2 SDL2_mixer samplerate c
 
+LIB_DEPENDS=	audio/libsamplerate \
+		devel/sdl2 \
+		devel/sdl2-mixer
+
 CONFIGURE_STYLE=	autoconf automake
 AUTOCONF_VERSION=	2.69
 AUTOMAKE_VERSION=	1.16
