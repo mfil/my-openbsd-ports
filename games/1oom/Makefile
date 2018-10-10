@@ -1,7 +1,7 @@
 COMMENT=	Master Of Orion engine recreation
 
 VERSION=	0.9
-DISTNAME=	1oom-v${VERSION}
+PKGNAME=	1oom-${VERSION}
 CATEGORIES=	games x11
 
 HOMEPAGE=	https://kilgoretroutmaskreplicant.gitlab.io/plain-html/
@@ -9,6 +9,7 @@ HOMEPAGE=	https://kilgoretroutmaskreplicant.gitlab.io/plain-html/
 # GPLv2+
 PERMIT_PACKAGE_CDROM=	Yes
 
+DISTNAME=	1oom-v${VERSION}
 MASTER_SITES=	https://gitlab.com/KilgoreTroutMaskReplicant/1oom/-/archive/v${VERSION}/
 
 WANTLIB=	SDL2 SDL2_mixer samplerate c
