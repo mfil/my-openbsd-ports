@@ -7,3 +7,4 @@
 @bin bin/1oom_pbxdump
 @bin bin/1oom_pbxmake
 @bin bin/1oom_saveconv
+share/doc/pkg-readmes/${PKGSTEM}
