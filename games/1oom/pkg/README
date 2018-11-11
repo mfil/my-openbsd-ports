@@ -17,11 +17,25 @@ On the first start, you need to tell 1oom where to find the game files:
 
 The location will be remembered for future starts.
 
-Options
-=======
+Bugfixes and Improvements
+=========================
 
-By default, 1oom tries to recreate version 1.3 of Master of Orion, the
-latest official version.  Improvements from later fan-made patches can
-be enabled optionally...
+By default, 1oom tries to roughly recreate the latest official version
+of Master of Orion, version 1.3.  Several improvements can be enabled
+optionally.  Firstly, an improved UI can be enabled with the `-uiextra'
+flag, and the UI can be scaled using the `-uiscale' option.  Passing an
+integer value larger than 1 allows viewing a larger portion of the map
+at once than the original game.
 
-TODO: Put pbx into /usr/local/share and explain how to use
+Fixes for various bugs and bug-like behaviors which were addressed in
+fan-made patches can be enabled using the modding utility 1oom_pbxmake
+included with this package.  First, run
+
+	1oom_pbxmake /usr/local/share/doc/1oom/pbxin_fixbugs.txt \
+	    ~/fixbugs.pbx
+
+and then start the game with the `-file ~/fixbugs.pbs' flag.  Note that
+1oom remebers the options you used, so you do not need to type them
+again on your next start.
+
+For further documentation, see the files in /usr/local/share/doc/1oom.
