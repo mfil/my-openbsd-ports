@@ -8,6 +8,8 @@ bin/1oom
 @bin bin/1oom_pbxdump
 @bin bin/1oom_pbxmake
 @bin bin/1oom_saveconv
+share/1oom/
+share/1oom/fixbugs.pbx
 share/doc/1oom/
 share/doc/1oom/Makefile
 share/doc/1oom/Makefile.am
