@@ -1,4 +1,5 @@
 @comment $OpenBSD: PLIST,v$
+bin/1oom
 @bin bin/1oom_classic_sdl2
 @bin bin/1oom_cmdline
 @bin bin/1oom_gfxconv

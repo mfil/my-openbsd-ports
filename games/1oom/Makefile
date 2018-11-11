@@ -24,4 +24,7 @@ AUTOMAKE_VERSION=	1.16
 AUTOCONF=		autoreconf -fi
 CONFIGURE_ARGS=		--disable-hwsdl1 --disable-hwalleg4
 
+post-install:
+	/bin/ln -s ${TRUEPREFIX}/bin/1oom_classic_sdl2 ${PREFIX}/bin/1oom
+
 .include <bsd.port.mk>
