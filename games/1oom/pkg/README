@@ -29,7 +29,7 @@ be scaled using the `-uiscale' option.  Passing a value larger than 1
 displays a larger portion of the map at once than the original game.
 
 AI improvements can be enabled by selecting `AI:Classic+' when setting
-up a new game.
+up a new game.  This requires using uiextra.
 
 
 For further documentation, see the files in /usr/local/share/doc/1oom.
