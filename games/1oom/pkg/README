@@ -20,17 +20,16 @@ The location will be remembered for future starts.
 Bugfixes and Improvements
 =========================
 
-By default, 1oom tries to roughly recreate the latest official version
-of Master of Orion, version 1.3.  Several improvements can be enabled
-optionally.  An improved UI can be enabled with the `-uiextra' flag, and
-the UI can be scaled using the `-uiscale' option.  Passing an integer
-value larger than 1 allows viewing a larger portion of the map at once
-than the original game.
+By default, 1oom tries to recreate the behavior of version 1.3, the last
+official version of the game, including bugs.  Bugfixes can be enabled
+with the `-file /usr/local/share/1oom/fixbugs.pbx' option.
 
-Fixes for various bugs and bug-like behaviors can be enabled by passing
-the `-file ~/fixbugs.pbs' flag.
+An improved UI can be enabled with the `-uiextra' flag, and the UI can
+be scaled using the `-uiscale' option.  Passing a value larger than 1
+displays a larger portion of the map at once than the original game.
 
 AI improvements can be enabled by selecting `AI:Classic+' when setting
 up a new game.
+
 
 For further documentation, see the files in /usr/local/share/doc/1oom.

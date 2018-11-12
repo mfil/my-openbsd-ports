@@ -11,17 +11,6 @@ bin/1oom
 share/1oom/
 share/1oom/fixbugs.pbx
 share/doc/1oom/
-share/doc/1oom/Makefile
-share/doc/1oom/Makefile.am
-share/doc/1oom/Makefile.in
-share/doc/1oom/ext/
-share/doc/1oom/ext/Makefile
-share/doc/1oom/ext/Makefile.am
-share/doc/1oom/ext/Makefile.in
-share/doc/1oom/ext/allegro-4.2.3.1-p1-modern-xmake.patch
-share/doc/1oom/ext/allegro-4.2.3.1-p2-remove-mouse-cursor.patch
-share/doc/1oom/ext/allegro-4.2.3.1-p3-disable-unused.patch
-share/doc/1oom/ext/fontdump.asm
 share/doc/1oom/format_gam.txt
 share/doc/1oom/format_lbx.txt
 share/doc/1oom/format_moo.txt
