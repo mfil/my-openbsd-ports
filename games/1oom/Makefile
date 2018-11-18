@@ -1,6 +1,6 @@
 COMMENT=	Master Of Orion engine recreation
 
-VERSION=	0.9
+VERSION=	1.0
 PKGNAME=	1oom-${VERSION}
 CATEGORIES=	games x11
 
