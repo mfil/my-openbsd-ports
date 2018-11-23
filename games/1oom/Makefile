@@ -1,3 +1,5 @@
+# $OpenBSD$
+
 COMMENT=	Master Of Orion engine recreation
 
 VERSION=	1.0
