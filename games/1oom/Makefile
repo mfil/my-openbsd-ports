@@ -25,10 +25,9 @@ AUTOCONF=		autoreconf -fi
 CONFIGURE_ARGS=		--disable-hwsdl1 --disable-hwalleg4
 
 post-install:
-	/bin/mkdir -p ${PREFIX}/share/1oom
-	/bin/mkdir -p ${PREFIX}/share/doc/1oom
 	/bin/ln -s ${TRUEPREFIX}/bin/1oom_classic_sdl2 ${PREFIX}/bin/1oom
 	cd ${WRKBUILD}/doc/; make install-recursive
+	/bin/mkdir -p ${PREFIX}/share/1oom
 	${PREFIX}/bin/1oom_pbxmake ${PREFIX}/share/doc/1oom/pbxin_fixbugs.txt \
 	    ${PREFIX}/share/1oom/fixbugs.pbx
 
