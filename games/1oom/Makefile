@@ -1,36 +1,34 @@
 # $OpenBSD$
 
-COMMENT=	Master Of Orion engine recreation
+COMMENT =	game engine recreation of Master of Orion 1
+DISTNAME =	1oom-1.0
+CATEGORIES =	games x11
 
-VERSION=	1.0
-PKGNAME=	1oom-${VERSION}
-CATEGORIES=	games x11
+HOMEPAGE =	https://kilgoretroutmaskreplicant.gitlab.io/plain-html/
 
-HOMEPAGE=	https://kilgoretroutmaskreplicant.gitlab.io/plain-html/
+MAINTAINER =	Max Fillinger <max@max-fillinger.net>
 
-# GPLv2+
-PERMIT_PACKAGE_CDROM=	Yes
+# GPLv2 only
+PERMIT_PACKAGE_CDROM =	Yes
 
-DISTNAME=	1oom-v${VERSION}
-MASTER_SITES=	https://gitlab.com/KilgoreTroutMaskReplicant/1oom/-/archive/v${VERSION}/
+WANTLIB += SDL2 SDL2_mixer c readline
 
-WANTLIB=	SDL2 SDL2_mixer samplerate c
+MASTER_SITES =	https://gitlab.com/KilgoreTroutMaskReplicant/1oom/uploads/13d2d645650929c6f7f08be356b62f66/
 
-LIB_DEPENDS=	audio/libsamplerate \
-		devel/sdl2 \
-		devel/sdl2-mixer
+LIB_DEPENDS =	devel/sdl2-mixer
 
-CONFIGURE_STYLE=	autoconf automake
-AUTOCONF_VERSION=	2.69
-AUTOMAKE_VERSION=	1.16
-AUTOCONF=		autoreconf -fi
-CONFIGURE_ARGS=		--disable-hwsdl1 --disable-hwalleg4
+CONFIGURE_STYLE =	gnu
+CONFIGURE_ARGS =	--disable-hwsdl1 \
+			--disable-hwalleg4
+
+# Create patch file so that the user can disable bug-compatibility with
+# the original game.
+post-build:
+	cd ${WRKSRC} && ./src/1oom_pbxmake doc/pbxin_fixbugs.txt \
+		fixbugs.pbx
 
 post-install:
-	/bin/ln -s ${TRUEPREFIX}/bin/1oom_classic_sdl2 ${PREFIX}/bin/1oom
-	cd ${WRKBUILD}/doc/; make install-recursive
-	/bin/mkdir -p ${PREFIX}/share/1oom
-	${PREFIX}/bin/1oom_pbxmake ${PREFIX}/share/doc/1oom/pbxin_fixbugs.txt \
-	    ${PREFIX}/share/1oom/fixbugs.pbx
+	${INSTALL_DATA_DIR} ${PREFIX}/share/1oom
+	${INSTALL_DATA} ${WRKSRC}/fixbugs.pbx ${PREFIX}/share/1oom
 
 .include <bsd.port.mk>
